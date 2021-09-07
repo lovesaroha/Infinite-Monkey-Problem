@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="infinite monkey problem">
+    <title>Infinite Monkey Problem</title>
+    <!-- Include css files. -->
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container w-full mx-auto max-w-8/12 md:px-4 pb-8">
+        <!-- Header. -->
+        <center>
+            <h1 class="font-bold display-1 underline">
+                Infinite Monkey Problem
+            </h1>
+            <h4 class="text-subtitle mb-6">The infinite monkey theorem states that a monkey hitting keys at random on a
+                typewriter keyboard for an infinite amount of time will almost surely type any given text,
+                such as the complete works of William Shakespeare. </h4>
+        </center>
+        <div class="bg-light mx-auto max-w-xl mb-2 p-2 text-center">
+            <h4 class="text-gray mb-0">Type a phrase and click on start to run genetic algorithm with selected configuration.</h4>
+        </div>
+        <!-- Config. -->
+        <div class="card shadow p-2 px-4 mb-4 mx-auto max-w-2xl">
+            <form onsubmit="javascript: start(event)">
+                <!-- Phrase. -->
+                <input type="text" name="phrase" class="w-full mb-2" id="phrase_input_id"
+                    placeholder="Enter phrase here.." autocomplete="off" required>
+                <!-- Change population size. -->
+                <h4>Population Size</h4>
+                <select
+                    class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                    id="maxpop_id" oninput="javascript: newMaxPop = parseInt(this.value);">
+                    <option selected value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                    <option value="600">600</option>
+                    <option value="800">800</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                </select>
+                <!-- Change mutation rate. -->
+                <h4>Mutation Rate</h4>
+                <select
+                    class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                    id="mutation_rate_id" oninput="javascript: newMutationRate = parseFloat(this.value);">
+                    <option selected value="0.01">1%</option>
+                    <option value="0.05">5%</option>
+                    <option value="0.1">10%</option>
+                    <option value="0.3">30%</option>
+                    <option value="0.9">90%</option>
+                </select>
+                <div class="mb-4 hidden" id="result_box_id">
+                    <!-- Result info. -->
+                    <div id="result_id">
+                        <h4>Generations <font id="generations_id" class="text-primary">0</font>
+                        </h4>
+                        <h4>Average Fitness <font id="avgfitness_id" class="text-primary">0</font>
+                        </h4>
+                        <div class="bg-light p-2 mb-1" id="best_phrase_id"></div>
+                        <div id="est_time_id"></div>
+                    </div>
+                </div>
+                <!-- Start algorithm. -->
+                <button id="submit_id" onclick="javascript: this.childNodes[1].data = ' ReStart';" type="submit">
+                    Start</button>
+            </form>
+        </div>
+        <!-- Footer. -->
+        <div class="mb-2 card text-center p-2 mx-auto max-w-xl">
+            <h4 class="text-subtitle"><a href="https://github.com/lovesaroha/Infinite-Monkey-Problem"
+                    target="_blank">LoveSaroha/Infinite-Monkey-Problem</a></h4>
+            <h3 class="text-subtitle font-bold mb-0 hover:underline cursor-pointer"
+                onclick="javascript: window.location = 'https://lovesaroha.com';">Love Saroha</h3>
+            <h4 class="text-gray">lovesaroha1994@gmail.com</h4>
+        </div>
+    </div>
+    <!-- Include script.js file -->
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
