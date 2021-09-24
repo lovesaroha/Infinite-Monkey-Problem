@@ -3,4 +3,4 @@
 
 ![game](https://raw.githubusercontent.com/lovesaroha/gimages/main/14.png)
 
-[lovesaroha/p/Infinite-Monkey-Problem](https://lovesaroha.com/p/Infinite-Monkey-Problem)
+[lovesaroha/Infinite-Monkey-Problem](https://js.lovesaroha.com/Infinite-Monkey-Problem)
